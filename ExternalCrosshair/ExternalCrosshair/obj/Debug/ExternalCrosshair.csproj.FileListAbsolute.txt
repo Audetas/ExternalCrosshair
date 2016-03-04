@@ -1,0 +1,12 @@
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\bin\Debug\ExternalCrosshair.exe.config
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\bin\Debug\ExternalCrosshair.exe
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\bin\Debug\ExternalCrosshair.pdb
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.csprojResolveAssemblyReference.cache
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.FrmConfig.resources
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.FrmCrosshair.resources
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.Properties.Resources.resources
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.csproj.GenerateResource.Cache
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.exe
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.pdb
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.FrmChoose.resources
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.FrmEdit.resources
