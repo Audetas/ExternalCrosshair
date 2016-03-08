@@ -10,6 +10,6 @@ Simple external crosshair with savable settings
 - Minimizes to system to stay idle
 
 ## To Do
-- Ability to use custom image as crosshar
+- Fix broken settings reading
 - Fix some of the styling options rendering
 - Add program icons in process list
