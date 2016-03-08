@@ -24,7 +24,6 @@ namespace ExternalCrosshair
 
         public void SetConfig(CrosshairConfig config, Process target)
         {
-            //Console.WriteLine(config.TargetProcessName);
             _config = config;
             _target = target;
             Opacity = config.Opacity;
@@ -36,7 +35,6 @@ namespace ExternalCrosshair
         
         public void Disable()
         {
-            //Console.WriteLine("disabled");
             Hide();
             _target = null;
             _config = null;

@@ -36,6 +36,7 @@ namespace ExternalCrosshair
 
             foreach (string serialization in Settings.Default.SavedProfiles)
             {
+                // Replacement is done due to conflicts in the settings serialization mechanism
                 using (StringReader reader = new StringReader(serialization.Replace('|', '<').Replace('`', '>')))
                 {
                     CrosshairConfig config = (CrosshairConfig)_serializer.Deserialize(reader);
@@ -129,6 +130,7 @@ namespace ExternalCrosshair
                 foreach (CrosshairConfig config in _configs.Values)
                 {
                     _serializer.Serialize(writer, config);
+                    // Replacement is done due to conflicts in the settings serialization mechanism
                     Settings.Default.SavedProfiles.Add(writer.ToString().Replace('<', '|').Replace('>', '`'));
                 }
                 Settings.Default.Save();

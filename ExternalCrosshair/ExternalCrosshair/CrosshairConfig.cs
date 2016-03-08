@@ -13,6 +13,8 @@ namespace ExternalCrosshair
     {
         public string TargetProcessName;
 
+        public Bitmap CrosshairImage = null;
+
         [XmlIgnore]
         public Color Color;
         [XmlIgnore]
@@ -42,12 +44,20 @@ namespace ExternalCrosshair
 
         public void DrawToSurface(Graphics g)
         {
-            Pen outline = new Pen(OutlineColor, Thickness + OutlineThickness + 1);
-            Pen inline = new Pen(Color, Thickness);
             g.TranslateTransform(g.ClipBounds.Width / 2, g.ClipBounds.Height / 2);
             g.RotateTransform(Rotation);
 
-            // Left
+            if (CrosshairImage != null)
+            {
+                g.DrawImage(CrosshairImage,
+                    -(CrosshairImage.Width / 2),
+                    -(CrosshairImage.Height / 2));
+                return;
+            }
+
+            Pen outline = new Pen(OutlineColor, Thickness + OutlineThickness + 1);
+            Pen inline = new Pen(Color, Thickness);
+
             if (OutlineThickness > 0)
             {
                 g.DrawLine(outline,

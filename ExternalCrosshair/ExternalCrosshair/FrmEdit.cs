@@ -73,5 +73,25 @@ namespace ExternalCrosshair
         {
             Close();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            pbxCustom.Image = null;
+            pnlConfig.Enabled = true;
+        }
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image files (*.jpg, *.jpeg, *.png, *.ico) | *.jpg; *.jpeg; *.png; *.ico";
+
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                _config.CrosshairImage = (Bitmap)Image.FromFile(open.FileName);
+                pbxCustom.Image = _config.CrosshairImage;
+                pnlPreview.Refresh();
+                pnlConfig.Enabled = false;
+            }
+        }
     }
 }

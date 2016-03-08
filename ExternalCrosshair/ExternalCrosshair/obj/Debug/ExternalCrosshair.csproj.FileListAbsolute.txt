@@ -10,3 +10,9 @@ C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\Ex
 C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.pdb
 C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.FrmChoose.resources
 C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.FrmEdit.resources
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\bin\Debug\mscorlib.dll
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\bin\Debug\normidna.nlp
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\bin\Debug\normnfc.nlp
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\bin\Debug\normnfd.nlp
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\bin\Debug\normnfkc.nlp
+C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\bin\Debug\normnfkd.nlp

@@ -16,6 +16,7 @@ namespace ExternalCrosshair
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Win32.SetProcessDPIAware();
             Application.Run(new FrmConfig());
         }
     }

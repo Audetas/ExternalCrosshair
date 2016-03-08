@@ -55,6 +55,10 @@
             this.btnCrosshairColor = new System.Windows.Forms.Panel();
             this.pnlPreview = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.grpCustom = new System.Windows.Forms.GroupBox();
+            this.pbxCustom = new System.Windows.Forms.PictureBox();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.pnlConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numOpacity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRotation)).BeginInit();
@@ -62,6 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOutlineThickness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numThickness)).BeginInit();
+            this.grpCustom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCustom)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlConfig
@@ -376,7 +382,7 @@
             // 
             this.pnlPreview.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlPreview.BackgroundImage")));
             this.pnlPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlPreview.Location = new System.Drawing.Point(12, 267);
+            this.pnlPreview.Location = new System.Drawing.Point(12, 345);
             this.pnlPreview.Name = "pnlPreview";
             this.pnlPreview.Size = new System.Drawing.Size(268, 142);
             this.pnlPreview.TabIndex = 1;
@@ -386,7 +392,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(12, 415);
+            this.btnSave.Location = new System.Drawing.Point(11, 493);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(268, 23);
             this.btnSave.TabIndex = 2;
@@ -394,11 +400,54 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // grpCustom
+            // 
+            this.grpCustom.Controls.Add(this.btnClear);
+            this.grpCustom.Controls.Add(this.btnBrowse);
+            this.grpCustom.Controls.Add(this.pbxCustom);
+            this.grpCustom.Location = new System.Drawing.Point(12, 267);
+            this.grpCustom.Name = "grpCustom";
+            this.grpCustom.Size = new System.Drawing.Size(268, 72);
+            this.grpCustom.TabIndex = 3;
+            this.grpCustom.TabStop = false;
+            this.grpCustom.Text = "Use a custom image";
+            // 
+            // pbxCustom
+            // 
+            this.pbxCustom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxCustom.Location = new System.Drawing.Point(216, 19);
+            this.pbxCustom.Name = "pbxCustom";
+            this.pbxCustom.Size = new System.Drawing.Size(44, 44);
+            this.pbxCustom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxCustom.TabIndex = 0;
+            this.pbxCustom.TabStop = false;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Location = new System.Drawing.Point(9, 18);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(201, 22);
+            this.btnBrowse.TabIndex = 2;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(9, 41);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(201, 23);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Clear custom image";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // FrmEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 451);
+            this.ClientSize = new System.Drawing.Size(292, 527);
+            this.Controls.Add(this.grpCustom);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.pnlPreview);
             this.Controls.Add(this.pnlConfig);
@@ -420,6 +469,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOutlineThickness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numThickness)).EndInit();
+            this.grpCustom.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCustom)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -452,5 +503,9 @@
         private System.Windows.Forms.GroupBox pnlPreview;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.CheckBox chkCenter;
+        private System.Windows.Forms.GroupBox grpCustom;
+        private System.Windows.Forms.PictureBox pbxCustom;
+        private System.Windows.Forms.Button btnBrowse;
+        private System.Windows.Forms.Button btnClear;
     }
 }

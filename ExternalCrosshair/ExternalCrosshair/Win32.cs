@@ -34,6 +34,9 @@ namespace ExternalCrosshair
         [DllImport("user32.dll")]
         public static extern bool SetForegroundWindow(IntPtr hWnd);
 
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern bool SetProcessDPIAware();
+
         public static Size GetClientSize(IntPtr h)
         {
             Rect rect = new Rect();
