@@ -34,15 +34,25 @@ namespace ExternalCrosshair
             _configs = new Dictionary<string, CrosshairConfig>();
             _serializer = new XmlSerializer(typeof(CrosshairConfig));
 
-            foreach (string serialization in Settings.Default.SavedProfiles)
+            try
             {
-                // Replacement is done due to conflicts in the settings serialization mechanism
-                using (StringReader reader = new StringReader(serialization.Replace('|', '<').Replace('`', '>')))
+                foreach (string serialization in Settings.Default.SavedProfiles)
                 {
-                    CrosshairConfig config = (CrosshairConfig)_serializer.Deserialize(reader);
-                    _configs.Add(config.TargetProcessName, config);
-                    lstPrograms.Items.Add(config.TargetProcessName);
+                    // Replacement is done due to conflicts in the settings serialization mechanism
+                    using (StringReader reader = new StringReader(serialization.Replace('|', '<').Replace('`', '>')))
+                    {
+                        CrosshairConfig config = (CrosshairConfig)_serializer.Deserialize(reader);
+                        _configs.Add(config.TargetProcessName, config);
+                        lstPrograms.Items.Add(config.TargetProcessName);
+                    }
                 }
+            }
+            catch
+            {
+                MessageBox.Show(
+                    "Your settings seem to be corrup and need to be reset. Press OK to continue.", 
+                    "External Crosshair", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Settings.Default.Upgrade();
             }
         }
 

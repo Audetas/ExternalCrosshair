@@ -28,21 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstProcesses = new System.Windows.Forms.ListBox();
             this.btnChoose = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lstProcesses = new System.Windows.Forms.ListView();
             this.SuspendLayout();
-            // 
-            // lstProcesses
-            // 
-            this.lstProcesses.FormattingEnabled = true;
-            this.lstProcesses.IntegralHeight = false;
-            this.lstProcesses.Location = new System.Drawing.Point(12, 12);
-            this.lstProcesses.Name = "lstProcesses";
-            this.lstProcesses.Size = new System.Drawing.Size(268, 216);
-            this.lstProcesses.TabIndex = 0;
-            this.lstProcesses.SelectedIndexChanged += new System.EventHandler(this.lstProcesses_SelectedIndexChanged);
-            this.lstProcesses.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstProcesses_MouseDoubleClick);
             // 
             // btnChoose
             // 
@@ -65,14 +54,23 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lstProcesses
+            // 
+            this.lstProcesses.Location = new System.Drawing.Point(11, 12);
+            this.lstProcesses.Name = "lstProcesses";
+            this.lstProcesses.Size = new System.Drawing.Size(270, 216);
+            this.lstProcesses.TabIndex = 3;
+            this.lstProcesses.UseCompatibleStateImageBehavior = false;
+            this.lstProcesses.View = System.Windows.Forms.View.List;
+            // 
             // FrmChoose
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 269);
+            this.Controls.Add(this.lstProcesses);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnChoose);
-            this.Controls.Add(this.lstProcesses);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmChoose";
             this.ShowIcon = false;
@@ -85,9 +83,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox lstProcesses;
         private System.Windows.Forms.Button btnChoose;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ListView lstProcesses;
     }
 }
