@@ -12,4 +12,3 @@ Simple external crosshair with savable settings
 ## To Do
 - Fix broken settings reading
 - Fix some of the styling options rendering
-- Add program icons in process list
