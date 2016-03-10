@@ -1,20 +1,15 @@
 ﻿using ExternalCrosshair.Properties;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace ExternalCrosshair
 {
-    public partial class FrmConfig : Form
+	public partial class FrmConfig : Form
     {
         private Dictionary<string, CrosshairConfig> _configs;
         private FrmCrosshair _crosshair;

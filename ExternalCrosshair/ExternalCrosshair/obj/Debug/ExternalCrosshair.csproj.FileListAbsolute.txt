@@ -10,3 +10,6 @@ C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\Ex
 C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.pdb
 C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.FrmChoose.resources
 C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.FrmEdit.resources
+C:\Users\eXeGOODER\Documents\GitHubVisualStudio\ExternalCrosshair\ExternalCrosshair\ExternalCrosshair\bin\Debug\ExternalCrosshair.exe.config
+C:\Users\eXeGOODER\Documents\GitHubVisualStudio\ExternalCrosshair\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.exe
+C:\Users\eXeGOODER\Documents\GitHubVisualStudio\ExternalCrosshair\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.pdb
