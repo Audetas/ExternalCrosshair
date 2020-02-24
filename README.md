@@ -8,7 +8,3 @@ Simple external crosshair with savable settings
 - Savable settings
 - Crosshair is automatically displayed to target window when opened
 - Minimizes to system to stay idle
-
-## To Do
-- Fix broken settings reading
-- Fix some of the styling options rendering
