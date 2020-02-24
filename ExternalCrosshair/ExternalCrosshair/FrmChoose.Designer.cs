@@ -62,6 +62,8 @@
             this.lstProcesses.TabIndex = 3;
             this.lstProcesses.UseCompatibleStateImageBehavior = false;
             this.lstProcesses.View = System.Windows.Forms.View.List;
+            this.lstProcesses.SelectedIndexChanged += new System.EventHandler(this.lstProcesses_SelectedIndexChanged);
+            this.lstProcesses.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstProcesses_MouseDoubleClick);
             // 
             // FrmChoose
             // 

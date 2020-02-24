@@ -1,4 +1,4 @@
-﻿using ExternalCrosshair.Properties;
+﻿using Sights.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,9 +50,25 @@ namespace ExternalCrosshair
             catch
             {
                 MessageBox.Show(
-                    "Your settings seem to be corrup and need to be reset. Press OK to continue.", 
-                    "External Crosshair", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    "Your settings seem to be corrupt and need to be reset. Press OK to continue.", 
+                    "External Sights", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Settings.Default.Upgrade();
+            }
+
+            // AutoHide if already configured
+            if (lstPrograms.Items.Count > 0)
+            {
+                var hid = true;
+                Shown += (e, s) =>
+                {
+                    if (hid)
+                    {
+                        hid = false;
+                        Hide();
+                    }
+                };
+                icoTray.Visible = true;
+                icoTray.ShowBalloonTip(2000, "External Sights", "Running with saved configs.", ToolTipIcon.None);
             }
         }
 
@@ -134,24 +150,12 @@ namespace ExternalCrosshair
         {
             Hide();
             icoTray.Visible = true;
-            using (StringWriter writer = new StringWriter())
-            {
-                Settings.Default.SavedProfiles.Clear();
-                foreach (CrosshairConfig config in _configs.Values)
-                {
-                    _serializer.Serialize(writer, config);
-                    // Replacement is done due to conflicts in the settings serialization mechanism
-                    Settings.Default.SavedProfiles.Add(writer.ToString().Replace('<', '|').Replace('>', '`'));
-                }
-                Settings.Default.Save();
-            }
         }
 
         private void icoTray_Click(object sender, EventArgs e)
         {
-            Show();
-            BringToFront();
             icoTray.Visible = false;
+            Show();
         }
 
         private bool _exit = false;
@@ -167,6 +171,19 @@ namespace ExternalCrosshair
             else
             {
                 icoTray.Visible = false;
+
+                // Save settings on exit
+                using (StringWriter writer = new StringWriter())
+                {
+                    Settings.Default.SavedProfiles.Clear();
+                    foreach (CrosshairConfig config in _configs.Values)
+                    {
+                        _serializer.Serialize(writer, config);
+                        // Replacement is done due to conflicts in the settings serialization mechanism
+                        Settings.Default.SavedProfiles.Add(writer.ToString().Replace('<', '|').Replace('>', '`'));
+                    }
+                    Settings.Default.Save();
+                }
             }
         }
 
@@ -177,6 +194,11 @@ namespace ExternalCrosshair
                 _exit = true;
                 Close();
             }
+        }
+
+        private void FrmConfig_Shown(object sender, EventArgs e)
+        {
+            BringToFront();
         }
     }
 }

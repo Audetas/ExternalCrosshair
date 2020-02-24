@@ -47,7 +47,7 @@
             this.Name = "FrmCrosshair";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "FrmCrosshair";
+            this.Text = "Sights";
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.Black;
             this.ResumeLayout(false);

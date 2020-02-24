@@ -61,7 +61,7 @@
             // btnHide
             // 
             this.btnHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHide.Location = new System.Drawing.Point(208, 236);
+            this.btnHide.Location = new System.Drawing.Point(206, 236);
             this.btnHide.Name = "btnHide";
             this.btnHide.Size = new System.Drawing.Size(75, 23);
             this.btnHide.TabIndex = 1;
@@ -80,7 +80,7 @@
             this.pnlList.Controls.Add(this.lstPrograms);
             this.pnlList.Location = new System.Drawing.Point(12, 12);
             this.pnlList.Name = "pnlList";
-            this.pnlList.Size = new System.Drawing.Size(270, 218);
+            this.pnlList.Size = new System.Drawing.Size(268, 218);
             this.pnlList.TabIndex = 2;
             this.pnlList.TabStop = false;
             this.pnlList.Text = "Target Program List";
@@ -88,7 +88,7 @@
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAdd.Location = new System.Drawing.Point(181, 190);
+            this.btnAdd.Location = new System.Drawing.Point(181, 188);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(82, 23);
             this.btnAdd.TabIndex = 3;
@@ -99,7 +99,7 @@
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEdit.Location = new System.Drawing.Point(93, 190);
+            this.btnEdit.Location = new System.Drawing.Point(93, 188);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(82, 23);
             this.btnEdit.TabIndex = 2;
@@ -110,7 +110,7 @@
             // btnRemove
             // 
             this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnRemove.Location = new System.Drawing.Point(5, 190);
+            this.btnRemove.Location = new System.Drawing.Point(5, 188);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(82, 23);
             this.btnRemove.TabIndex = 1;
@@ -127,7 +127,7 @@
             this.lstPrograms.IntegralHeight = false;
             this.lstPrograms.Location = new System.Drawing.Point(6, 19);
             this.lstPrograms.Name = "lstPrograms";
-            this.lstPrograms.Size = new System.Drawing.Size(258, 165);
+            this.lstPrograms.Size = new System.Drawing.Size(256, 165);
             this.lstPrograms.TabIndex = 0;
             // 
             // icoTray
@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(294, 271);
+            this.ClientSize = new System.Drawing.Size(292, 271);
             this.Controls.Add(this.pnlList);
             this.Controls.Add(this.btnHide);
             this.Controls.Add(this.btnExit);
@@ -151,8 +151,9 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(300, 300);
             this.Name = "FrmConfig";
-            this.Text = "External Crosshair";
+            this.Text = "External Sights by Kronks";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmConfig_FormClosing);
+            this.Shown += new System.EventHandler(this.FrmConfig_Shown);
             this.pnlList.ResumeLayout(false);
             this.ResumeLayout(false);
 

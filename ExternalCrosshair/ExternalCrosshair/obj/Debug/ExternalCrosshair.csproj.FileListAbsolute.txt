@@ -10,3 +10,6 @@ C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\Ex
 C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.pdb
 C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.FrmChoose.resources
 C:\Users\Alec\OneDrive\Projects\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.FrmEdit.resources
+C:\Users\Administrator\Desktop\ExternalCrosshair-master\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\ExternalCrosshair-master\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.exe
+C:\Users\Administrator\Desktop\ExternalCrosshair-master\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.pdb

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ExternalCrosshair")]
+[assembly: AssemblyTitle("Sights")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ExternalCrosshair")]
+[assembly: AssemblyProduct("Sights")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("afa30170-9b47-4285-a3c3-0131da6efb09")]
+[assembly: Guid("87ad5434-aa4c-4f5f-98b2-1f9f68c643cf")]
 
 // Version information for an assembly consists of the following four values:
 //
