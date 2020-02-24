@@ -1,7 +1,6 @@
 C:\Users\Administrator\Desktop\ExternalCrosshair-master\ExternalCrosshair\ExternalCrosshair\bin\Debug\Sights.exe.config
 C:\Users\Administrator\Desktop\ExternalCrosshair-master\ExternalCrosshair\ExternalCrosshair\bin\Debug\Sights.exe
 C:\Users\Administrator\Desktop\ExternalCrosshair-master\ExternalCrosshair\ExternalCrosshair\bin\Debug\Sights.pdb
-C:\Users\Administrator\Desktop\ExternalCrosshair-master\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalSights.csprojAssemblyReference.cache
 C:\Users\Administrator\Desktop\ExternalCrosshair-master\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.FrmChoose.resources
 C:\Users\Administrator\Desktop\ExternalCrosshair-master\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.FrmConfig.resources
 C:\Users\Administrator\Desktop\ExternalCrosshair-master\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalCrosshair.FrmCrosshair.resources

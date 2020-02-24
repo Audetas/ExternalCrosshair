@@ -41,10 +41,13 @@ namespace ExternalCrosshair
         public int Size;
         public int Rotation;
         public double Opacity;
+        public int OffsetX;
+        public int OffsetY;
 
         public void DrawToSurface(Graphics g)
         {
             g.TranslateTransform(g.ClipBounds.Width / 2, g.ClipBounds.Height / 2);
+            g.TranslateTransform(OffsetX, OffsetY);
             g.RotateTransform(Rotation);
 
             if (CrosshairImage != null)

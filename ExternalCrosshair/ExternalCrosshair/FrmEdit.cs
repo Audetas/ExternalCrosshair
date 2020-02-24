@@ -30,6 +30,8 @@ namespace ExternalCrosshair
             numRotation.Value = _config.Rotation;
             numOpacity.Value = (decimal)_config.Opacity;
             chkCenter.Checked = _config.CenterPoint;
+            numXOffset.Value = _config.OffsetX;
+            numYOffset.Value = _config.OffsetY;
             initialized = true;
         }
 
@@ -56,6 +58,8 @@ namespace ExternalCrosshair
             _config.Rotation = (int)numRotation.Value;
             _config.Opacity = (double)numOpacity.Value;
             _config.CenterPoint = chkCenter.Checked;
+            _config.OffsetX = (int)numXOffset.Value;
+            _config.OffsetY = (int)numYOffset.Value;
         }
 
         private void Color_Click(object sender, EventArgs e)
