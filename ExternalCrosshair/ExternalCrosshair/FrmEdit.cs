@@ -13,12 +13,13 @@ namespace ExternalCrosshair
     public partial class FrmEdit : Form
     {
         private CrosshairConfig _config;
+        private bool initialized = false;
 
         public FrmEdit(CrosshairConfig config)
         {
             InitializeComponent();
-            SuspendLayout();
             _config = config;
+
             pnlConfig.Text = "Configure crosshair for: " + _config.TargetProcessName;
             btnCrosshairColor.BackColor = _config.Color;
             btnOutlineColor.BackColor = _config.OutlineColor;
@@ -29,7 +30,7 @@ namespace ExternalCrosshair
             numRotation.Value = _config.Rotation;
             numOpacity.Value = (decimal)_config.Opacity;
             chkCenter.Checked = _config.CenterPoint;
-            ResumeLayout();
+            initialized = true;
         }
 
         private void FrmEdit_FormClosing(object sender, FormClosingEventArgs e)
@@ -45,6 +46,7 @@ namespace ExternalCrosshair
 
         private void ApplyChanges()
         {
+            if (!initialized) return;
             _config.Color = btnCrosshairColor.BackColor;
             _config.OutlineColor = btnOutlineColor.BackColor;
             _config.Thickness = (int)numThickness.Value;

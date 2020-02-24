@@ -55,53 +55,54 @@ namespace ExternalCrosshair
                 return;
             }
 
-            Pen outline = new Pen(OutlineColor, Thickness + OutlineThickness + 1);
-            Pen inline = new Pen(Color, Thickness);
-
-            if (OutlineThickness > 0)
+            using (Pen outline = new Pen(OutlineColor, Thickness + OutlineThickness + 1))
+            using (Pen inline = new Pen(Color, Thickness))
             {
-                g.DrawLine(outline,
-                    -(Separation + Size + OutlineThickness), 0,
-                    -(Separation - OutlineThickness - 1), 0);
-                g.DrawLine(outline,
-                    +(Separation - OutlineThickness), 0,
-                    +(Separation + Size + OutlineThickness + 1), 0);
-                g.DrawLine(outline,
-                    0, -(Separation + Size + OutlineThickness + 1),
-                    0, -(Separation - OutlineThickness));
-                g.DrawLine(outline,
-                    0, +(Separation - OutlineThickness - 1),
-                    0, +(Separation + Size + OutlineThickness));
-            }
+                if (OutlineThickness > 0)
+                {
+                    g.DrawLine(outline,
+                        -(Separation + Size + OutlineThickness), 0,
+                        -(Separation - OutlineThickness - 1), 0);
+                    g.DrawLine(outline,
+                        +(Separation - OutlineThickness), 0,
+                        +(Separation + Size + OutlineThickness + 1), 0);
+                    g.DrawLine(outline,
+                        0, -(Separation + Size + OutlineThickness + 1),
+                        0, -(Separation - OutlineThickness));
+                    g.DrawLine(outline,
+                        0, +(Separation - OutlineThickness - 1),
+                        0, +(Separation + Size + OutlineThickness));
+                }
 
-            if (Thickness > 0)
-            {
-                g.DrawLine(inline,
-                    -(Separation + Size), 0,
-                    -(Separation), 0);
-                g.DrawLine(inline,
-                    +(Separation), 0,
-                    +(Separation + Size), 0);
-                g.DrawLine(inline,
-                    0, -(Separation + Size),
-                    0, -(Separation));
-                g.DrawLine(inline,
-                    0, +(Separation),
-                    0, +(Separation + Size));
-            }
+                if (Thickness > 0)
+                {
+                    g.DrawLine(inline,
+                        -(Separation + Size), 0,
+                        -(Separation), 0);
+                    g.DrawLine(inline,
+                        +(Separation), 0,
+                        +(Separation + Size), 0);
+                    g.DrawLine(inline,
+                        0, -(Separation + Size),
+                        0, -(Separation));
+                    g.DrawLine(inline,
+                        0, +(Separation),
+                        0, +(Separation + Size));
+                }
 
-            if (CenterPoint && OutlineThickness > 0)
-            {
-                g.DrawLine(outline,
-                    -(Thickness / 2 + OutlineThickness), 0,
-                    +(Thickness / 2 + OutlineThickness + 1), 0);
-            }
+                if (CenterPoint && OutlineThickness > 0)
+                {
+                    g.DrawLine(outline,
+                        -(Thickness / 2 + OutlineThickness), 0,
+                        +(Thickness / 2 + OutlineThickness + 1), 0);
+                }
 
-            if (CenterPoint && Thickness > 0)
-            {
-                g.DrawLine(inline,
-                    -(Thickness / 2), 0,
-                    +(Thickness / 2), 0);
+                if (CenterPoint && Thickness > 0)
+                {
+                    g.DrawLine(inline,
+                        -(Thickness / 2), 0,
+                        +(Thickness / 2), 0);
+                }
             }
         }
     }

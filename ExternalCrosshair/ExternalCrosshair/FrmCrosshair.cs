@@ -68,13 +68,18 @@ namespace ExternalCrosshair
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
+
+            if (_config == null)
+                return;
+
             e.Graphics.SetClip(ClientRectangle);
-            e.Graphics.DrawRectangle(Pens.Red, 0, 0, Width - 1, Height - 1);
+            using (var pen = new Pen(_config.Color))
+                e.Graphics.DrawRectangle(pen, 0, 0, Width - 1, Height - 1);
             e.Graphics.DrawLine(Pens.Black, 0, 8, 0, Height - 9);
             e.Graphics.DrawLine(Pens.Black, Width - 1, 8, Width - 1, Height - 9);
             e.Graphics.DrawLine(Pens.Black, 8, 0, Width - 9, 0);
             e.Graphics.DrawLine(Pens.Black, 8, Height - 1, Width - 9, Height - 1);
-            _config?.DrawToSurface(e.Graphics);
+            _config.DrawToSurface(e.Graphics);
         }
     }
 }
