@@ -32,6 +32,11 @@ namespace ExternalCrosshair
             Invalidate();
             tmrRefresh.Start();
         }
+
+        public CrosshairConfig GetConfig()
+        {
+            return _config;
+        }
         
         public void Disable()
         {
@@ -49,8 +54,8 @@ namespace ExternalCrosshair
             }
             else
             {
-                Size newSize = Win32.GetClientSize(_target.MainWindowHandle);
-                Point newLoc = Win32.GetClientLocation(_target.MainWindowHandle);
+                var newSize = Win32.GetClientSize(_target.MainWindowHandle);
+                var newLoc = Win32.GetClientLocation(_target.MainWindowHandle);
 
                 if (Size != newSize)
                 {

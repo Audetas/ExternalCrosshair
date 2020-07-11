@@ -20,7 +20,7 @@ namespace ExternalCrosshair
             InitializeComponent();
 
             lstProcesses.SmallImageList = new ImageList();
-            int index = 0;
+            var index = 0;
             foreach (Process p in Process.GetProcesses())
             {
                 if (p.MainWindowHandle != IntPtr.Zero)

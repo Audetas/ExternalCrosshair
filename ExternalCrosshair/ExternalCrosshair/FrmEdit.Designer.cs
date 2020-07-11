@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEdit));
             this.pnlConfig = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numYOffset = new System.Windows.Forms.NumericUpDown();
+            this.numXOffset = new System.Windows.Forms.NumericUpDown();
+            this.lblYOffset = new System.Windows.Forms.Label();
+            this.lblXOffset = new System.Windows.Forms.Label();
             this.chkCenter = new System.Windows.Forms.CheckBox();
             this.lblUnitsOpacity = new System.Windows.Forms.Label();
             this.lblUnitsRotation = new System.Windows.Forms.Label();
@@ -59,13 +65,10 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.pbxCustom = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numYOffset = new System.Windows.Forms.NumericUpDown();
-            this.numXOffset = new System.Windows.Forms.NumericUpDown();
-            this.lblYOffset = new System.Windows.Forms.Label();
-            this.lblXOffset = new System.Windows.Forms.Label();
+            this.chkHideOnRight = new System.Windows.Forms.CheckBox();
             this.pnlConfig.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numYOffset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numXOffset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOpacity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRotation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSeperation)).BeginInit();
@@ -74,12 +77,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numThickness)).BeginInit();
             this.grpCustom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCustom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numYOffset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numXOffset)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlConfig
             // 
+            this.pnlConfig.Controls.Add(this.chkHideOnRight);
             this.pnlConfig.Controls.Add(this.label1);
             this.pnlConfig.Controls.Add(this.label2);
             this.pnlConfig.Controls.Add(this.numYOffset);
@@ -115,6 +117,76 @@
             this.pnlConfig.TabIndex = 0;
             this.pnlConfig.TabStop = false;
             this.pnlConfig.Text = "Configure settings for: rust.exe";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(200, 254);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "(pixels)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(200, 228);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "(pixels)";
+            // 
+            // numYOffset
+            // 
+            this.numYOffset.Location = new System.Drawing.Point(113, 252);
+            this.numYOffset.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.numYOffset.Minimum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            -2147483648});
+            this.numYOffset.Name = "numYOffset";
+            this.numYOffset.Size = new System.Drawing.Size(81, 20);
+            this.numYOffset.TabIndex = 26;
+            // 
+            // numXOffset
+            // 
+            this.numXOffset.Location = new System.Drawing.Point(113, 226);
+            this.numXOffset.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.numXOffset.Minimum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            -2147483648});
+            this.numXOffset.Name = "numXOffset";
+            this.numXOffset.Size = new System.Drawing.Size(81, 20);
+            this.numXOffset.TabIndex = 25;
+            // 
+            // lblYOffset
+            // 
+            this.lblYOffset.AutoSize = true;
+            this.lblYOffset.Location = new System.Drawing.Point(6, 254);
+            this.lblYOffset.Name = "lblYOffset";
+            this.lblYOffset.Size = new System.Drawing.Size(48, 13);
+            this.lblYOffset.TabIndex = 24;
+            this.lblYOffset.Text = "Y Offset:";
+            // 
+            // lblXOffset
+            // 
+            this.lblXOffset.AutoSize = true;
+            this.lblXOffset.Location = new System.Drawing.Point(6, 228);
+            this.lblXOffset.Name = "lblXOffset";
+            this.lblXOffset.Size = new System.Drawing.Size(48, 13);
+            this.lblXOffset.TabIndex = 23;
+            this.lblXOffset.Text = "X Offset:";
             // 
             // chkCenter
             // 
@@ -456,75 +528,15 @@
             this.pbxCustom.TabIndex = 0;
             this.pbxCustom.TabStop = false;
             // 
-            // label1
+            // chkHideOnRight
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(200, 254);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "(pixels)";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(200, 228);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "(pixels)";
-            // 
-            // numYOffset
-            // 
-            this.numYOffset.Location = new System.Drawing.Point(113, 252);
-            this.numYOffset.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.numYOffset.Minimum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            -2147483648});
-            this.numYOffset.Name = "numYOffset";
-            this.numYOffset.Size = new System.Drawing.Size(81, 20);
-            this.numYOffset.TabIndex = 26;
-            // 
-            // numXOffset
-            // 
-            this.numXOffset.Location = new System.Drawing.Point(113, 226);
-            this.numXOffset.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.numXOffset.Minimum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            -2147483648});
-            this.numXOffset.Name = "numXOffset";
-            this.numXOffset.Size = new System.Drawing.Size(81, 20);
-            this.numXOffset.TabIndex = 25;
-            // 
-            // lblYOffset
-            // 
-            this.lblYOffset.AutoSize = true;
-            this.lblYOffset.Location = new System.Drawing.Point(6, 254);
-            this.lblYOffset.Name = "lblYOffset";
-            this.lblYOffset.Size = new System.Drawing.Size(48, 13);
-            this.lblYOffset.TabIndex = 24;
-            this.lblYOffset.Text = "Y Offset:";
-            // 
-            // lblXOffset
-            // 
-            this.lblXOffset.AutoSize = true;
-            this.lblXOffset.Location = new System.Drawing.Point(6, 228);
-            this.lblXOffset.Name = "lblXOffset";
-            this.lblXOffset.Size = new System.Drawing.Size(48, 13);
-            this.lblXOffset.TabIndex = 23;
-            this.lblXOffset.Text = "X Offset:";
+            this.chkHideOnRight.AutoSize = true;
+            this.chkHideOnRight.Location = new System.Drawing.Point(111, 277);
+            this.chkHideOnRight.Name = "chkHideOnRight";
+            this.chkHideOnRight.Size = new System.Drawing.Size(117, 17);
+            this.chkHideOnRight.TabIndex = 29;
+            this.chkHideOnRight.Text = "Hide on Right Click";
+            this.chkHideOnRight.UseVisualStyleBackColor = true;
             // 
             // FrmEdit
             // 
@@ -547,6 +559,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmEdit_FormClosing);
             this.pnlConfig.ResumeLayout(false);
             this.pnlConfig.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numYOffset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numXOffset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOpacity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRotation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSeperation)).EndInit();
@@ -555,8 +569,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numThickness)).EndInit();
             this.grpCustom.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxCustom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numYOffset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numXOffset)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -599,5 +611,6 @@
         private System.Windows.Forms.NumericUpDown numXOffset;
         private System.Windows.Forms.Label lblYOffset;
         private System.Windows.Forms.Label lblXOffset;
+        private System.Windows.Forms.CheckBox chkHideOnRight;
     }
 }

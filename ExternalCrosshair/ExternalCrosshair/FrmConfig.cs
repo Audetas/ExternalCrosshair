@@ -54,29 +54,12 @@ namespace ExternalCrosshair
                     "External Sights", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Settings.Default.Upgrade();
             }
-
-            // AutoHide if already configured
-            if (lstPrograms.Items.Count > 0)
-            {
-                var hid = true;
-                Shown += (e, s) =>
-                {
-                    if (hid)
-                    {
-                        hid = false;
-                        Hide();
-                    }
-                };
-                icoTray.Visible = true;
-                icoTray.ShowBalloonTip(2000, "External Sights", "Running with saved configs.", ToolTipIcon.None);
-            }
         }
 
         private void tmrUpdate_Tick(object sender, EventArgs e)
         {
-            IntPtr foreground = Win32.GetForegroundWindow();
+            var foreground = Win32.GetForegroundWindow();
 
-            // Foreground has changed so we should adjust the crosshair form
             if (foreground == _crosshair.Handle)
             {
                 Win32.SetForegroundWindow(_lastWindow);
@@ -94,28 +77,39 @@ namespace ExternalCrosshair
                 else
                     _crosshair.Disable();
             }
+            else if (_crosshair.GetConfig() != null)
+            {
+                var hideOnRight = _crosshair.GetConfig().HideOnRight;
+                var rightDown = (Control.MouseButtons & MouseButtons.Right) != 0;
+
+                if (hideOnRight && rightDown && _crosshair.Visible)
+                    _crosshair.Hide();
+                else if (hideOnRight && !rightDown && !_crosshair.Visible)
+                    _crosshair.Show();
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            FrmChoose chooser = new FrmChoose();
+            var chooser = new FrmChoose();
             chooser.ShowDialog();
 
             if (chooser.ChosenProcess.Length == 0)
                 return;
 
-            CrosshairConfig config = new CrosshairConfig()
+            var config = new CrosshairConfig()
             {
                 TargetProcessName = chooser.ChosenProcess,
                 Color = Color.Red,
                 OutlineColor = Color.Gray,
-                CenterPoint = true,
-                Thickness = 2,
-                OutlineThickness = 1,
-                Separation = 5,
-                Size = 10,
+                CenterPoint = false,
+                Thickness = 1,
+                OutlineThickness = 0,
+                Separation = 4,
+                Size = 8,
                 Rotation = 0,
-                Opacity = 1
+                Opacity = 1,
+                HideOnRight = false
             };
 
             new FrmEdit(config).ShowDialog();
@@ -146,53 +140,18 @@ namespace ExternalCrosshair
             }
         }
 
-        private void btnHide_Click(object sender, EventArgs e)
-        {
-            Hide();
-            icoTray.Visible = true;
-        }
-
-        private void icoTray_Click(object sender, EventArgs e)
-        {
-            icoTray.Visible = false;
-            Show();
-        }
-
-        private bool _exit = false;
         private void FrmConfig_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = !_exit;
-
-            if (!_exit)
+            using (StringWriter writer = new StringWriter())
             {
-                Hide();
-                icoTray.Visible = true;
-            }
-            else
-            {
-                icoTray.Visible = false;
-
-                // Save settings on exit
-                using (StringWriter writer = new StringWriter())
+                Settings.Default.SavedProfiles.Clear();
+                foreach (var config in _configs.Values)
                 {
-                    Settings.Default.SavedProfiles.Clear();
-                    foreach (CrosshairConfig config in _configs.Values)
-                    {
-                        _serializer.Serialize(writer, config);
-                        // Replacement is done due to conflicts in the settings serialization mechanism
-                        Settings.Default.SavedProfiles.Add(writer.ToString().Replace('<', '|').Replace('>', '`'));
-                    }
-                    Settings.Default.Save();
+                    _serializer.Serialize(writer, config);
+                    // Replacement is done due to conflicts in the settings serialization mechanism
+                    Settings.Default.SavedProfiles.Add(writer.ToString().Replace('<', '|').Replace('>', '`'));
                 }
-            }
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Are you sure you want to completely exit External Crosshair?", "External Crosshair", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                _exit = true;
-                Close();
+                Settings.Default.Save();
             }
         }
 

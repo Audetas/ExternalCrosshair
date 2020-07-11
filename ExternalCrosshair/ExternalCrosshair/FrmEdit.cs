@@ -32,6 +32,7 @@ namespace ExternalCrosshair
             chkCenter.Checked = _config.CenterPoint;
             numXOffset.Value = _config.OffsetX;
             numYOffset.Value = _config.OffsetY;
+            chkHideOnRight.Checked = _config.HideOnRight;
             initialized = true;
         }
 
@@ -60,6 +61,7 @@ namespace ExternalCrosshair
             _config.CenterPoint = chkCenter.Checked;
             _config.OffsetX = (int)numXOffset.Value;
             _config.OffsetY = (int)numYOffset.Value;
+            _config.HideOnRight = chkHideOnRight.Checked;
         }
 
         private void Color_Click(object sender, EventArgs e)

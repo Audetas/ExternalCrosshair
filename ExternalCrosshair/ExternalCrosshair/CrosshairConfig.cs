@@ -43,6 +43,7 @@ namespace ExternalCrosshair
         public double Opacity;
         public int OffsetX;
         public int OffsetY;
+        public bool HideOnRight;
 
         public void DrawToSurface(Graphics g)
         {

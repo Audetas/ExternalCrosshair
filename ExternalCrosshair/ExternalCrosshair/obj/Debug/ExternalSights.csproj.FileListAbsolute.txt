@@ -9,3 +9,4 @@ C:\Users\Administrator\Desktop\ExternalCrosshair-master\ExternalCrosshair\Extern
 C:\Users\Administrator\Desktop\ExternalCrosshair-master\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalSights.csproj.GenerateResource.cache
 C:\Users\Administrator\Desktop\ExternalCrosshair-master\ExternalCrosshair\ExternalCrosshair\obj\Debug\Sights.exe
 C:\Users\Administrator\Desktop\ExternalCrosshair-master\ExternalCrosshair\ExternalCrosshair\obj\Debug\Sights.pdb
+C:\Users\Administrator\Desktop\ExternalCrosshair-master\ExternalCrosshair\ExternalCrosshair\obj\Debug\ExternalSights.csproj.CoreCompileInputs.cache
